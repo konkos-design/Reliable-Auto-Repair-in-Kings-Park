@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add("js")</script>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Blacktown Automotive Services | Mechanic &amp; Auto Repair in Kings Park</title>
+<meta name="description" content="Family owned auto repair shop in Kings Park since 1999. Manufacturer approved log book servicing, Rego checks while you wait, and A/C repairs. Call +61 2 9622 5598.">
+<meta name="theme-color" content="#0f2747">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRepair","name":"Blacktown Automotive Services","telephone":"+61296225598","email":"blacktownautomotive@hotmail.com","foundingDate":"1999","address":{"@type":"PostalAddress","streetAddress":"Unit 3, 4 Romford Rd","addressLocality":"Kings Park","addressRegion":"NSW","postalCode":"2148","addressCountry":"AU"},"geo":{"@type":"GeoCoordinates","latitude":-33.7488672,"longitude":150.915338},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"16:30"}]}
+</script>
+<style>
+:root{--navy:#0f2747;--ink:#1b2430;--orange:#ff6a13;--bg:#f4f6f8}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{margin:0;font:17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.ic{width:1.2em;height:1.2em;flex:none;fill:currentColor}
+.ic.s{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 1px 0 #e1e6ec;padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:12px;height:68px}
+.logo{margin-right:auto;font-weight:900;font-size:1.05rem;line-height:1.15;color:var(--navy);text-decoration:none}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-weight:600;color:#33445c}
+nav a:hover{color:var(--orange)}
+.pin{display:flex;color:var(--navy);padding:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--orange);color:#fff;font-weight:800;text-decoration:none;padding:13px 22px;border-radius:10px;box-shadow:0 6px 16px rgba(255,106,19,.3);transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{background:#e85a05;transform:translateY(-2px);box-shadow:0 10px 22px rgba(255,106,19,.4)}
+.btn.alt{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
+.btn.alt:hover{background:rgba(15,39,71,.08);box-shadow:inset 0 0 0 2px var(--navy)}
+.btn.dark{background:var(--navy);box-shadow:none}
+.btn.dark:hover{background:#1a3a66}
+a:focus-visible,button:focus-visible{outline:3px solid #2f7bff;outline-offset:3px}
+.burger{display:none;background:none;border:0;padding:8px;color:var(--navy);cursor:pointer}
+.burger .ic{width:28px;height:28px}
+.hero{background:#e9eef4;padding:56px 0 68px;min-height:min(82vh,700px);min-height:min(82svh,700px);display:flex;align-items:center}
+.hg{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:9px;margin:0;background:#fff;border:1px solid #d6dee8;padding:7px 14px;border-radius:99px;font-weight:700;font-size:.93rem;color:var(--navy)}
+.status i{width:10px;height:10px;border-radius:50%;background:#8a97a8}
+.status.open i{background:#1fb35a;animation:blink 2s infinite}
+@keyframes blink{0%{box-shadow:0 0 0 0 rgba(31,179,90,.6)}70%,100%{box-shadow:0 0 0 8px rgba(31,179,90,0)}}
+h1{font-size:clamp(2.5rem,8vw,5rem);line-height:1;letter-spacing:-.035em;font-weight:900;color:var(--navy);margin:22px 0 14px;max-width:12ch}
+.sub{font-size:clamp(1.15rem,3.5vw,1.45rem);font-weight:600;margin:0 0 30px;color:#44546a}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.num{display:none}
+@media(min-width:1100px){.num{display:inline;font-weight:600;opacity:.92}}
+.gauge{justify-self:center;width:100%;max-width:380px;text-align:center}
+.gauge svg{width:100%;height:auto;filter:drop-shadow(0 24px 30px rgba(15,39,71,.28))}
+.val{stroke-dasharray:96 100;animation:fill 1.8s cubic-bezier(.2,.8,.2,1) .4s backwards}
+.needle{transform-origin:150px 150px;transform:rotate(124.2deg);animation:sweep 1.8s cubic-bezier(.2,.8,.2,1) .4s backwards,tremble 3.4s ease-in-out 2.2s infinite}
+@keyframes tremble{0%,100%{transform:rotate(124.2deg)}12%{transform:rotate(126deg)}27%{transform:rotate(123deg)}41%{transform:rotate(125.4deg)}58%{transform:rotate(123.6deg)}73%{transform:rotate(125.8deg)}86%{transform:rotate(124.6deg)}}
+.js h2,.js .svc,.js .about p,.js .facts li,.js .rev,.js .more,.js .info p,.js .map{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+html.js body .on{opacity:1;transform:none}
+@keyframes fill{from{stroke-dasharray:0 100}}
+@keyframes sweep{from{transform:rotate(-135deg)}}
+.badge{display:inline-flex;align-items:center;gap:8px;margin-top:14px;background:#fff;border:1px solid #d6dee8;padding:7px 14px;border-radius:99px;font-weight:700;font-size:.95rem;color:var(--navy)}
+.badge b{color:var(--orange)}
+.in{opacity:0;transform:translateY(18px);animation:up .7s ease forwards}
+.in:nth-child(2){animation-delay:.12s}.in:nth-child(3){animation-delay:.24s}.in:nth-child(4){animation-delay:.36s}
+@keyframes up{to{opacity:1;transform:none}}
+.sec{padding:76px 0}
+h2{font-size:clamp(1.8rem,5vw,2.7rem);line-height:1.1;font-weight:900;color:var(--navy);margin:0 0 34px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.svc{background:#fff;padding:28px 26px;border-left:6px solid var(--orange);border-radius:4px 14px 14px 4px;box-shadow:0 2px 14px rgba(15,39,71,.07)}
+.svc .ic{width:40px;height:40px;color:var(--navy);margin-bottom:14px}
+.svc h3{margin:0 0 6px;font-size:1.3rem;color:var(--navy)}
+.svc p{margin:0;color:#44546a}
+.about{background:var(--navy);color:#fff}
+.about h2{color:#fff}
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
+.about p{margin:0 0 16px;color:#d4e0f2;max-width:60ch}
+.facts{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.2)}
+.facts li{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.2);font-weight:700;font-size:1.1rem}
+.facts span{display:block;font-weight:400;font-size:.98rem;color:#b9c9e0}
+.rev{margin:0;padding:6px 0 6px 20px;border-left:4px solid var(--orange);font-size:1.15rem;font-weight:600;color:var(--navy)}
+.rev cite{display:block;margin-top:8px;font-style:normal;font-weight:400;font-size:.92rem;color:#5a6a80}
+.more{margin-top:30px}
+.more a{font-weight:700;color:var(--navy)}
+.contact{background:#fff}
+.contact .two{grid-template-columns:1fr 1.3fr;align-items:stretch}
+.info p{margin:0 0 14px}
+.info b{display:block;color:var(--navy)}
+.info a{text-decoration-thickness:2px;text-underline-offset:3px}
+.map{width:100%;height:100%;min-height:340px;border:0;border-radius:14px;background:#e6ebf1}
+footer{background:#0a1a33;color:#9fb2cf;padding:26px 0;padding-bottom:calc(26px + env(safe-area-inset-bottom));font-size:.95rem}
+.fab{display:none;position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;width:62px;height:62px;border-radius:50%;background:var(--orange);color:#fff;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,.3);animation:pulse 2.4s ease-out 2s 3}
+.fab .ic{width:28px;height:28px}
+@keyframes pulse{0%{box-shadow:0 8px 22px rgba(0,0,0,.3),0 0 0 0 rgba(255,106,19,.6)}100%{box-shadow:0 8px 22px rgba(0,0,0,.3),0 0 0 22px rgba(255,106,19,0)}}
+@media(max-width:860px){
+ .burger{display:block}
+ nav{position:absolute;left:0;right:0;top:100%;background:#fff;box-shadow:0 12px 20px rgba(15,39,71,.12);display:none}
+ nav.open{display:block}
+ nav ul{flex-direction:column;gap:0;padding:6px 20px 14px}
+ nav a{display:block;padding:14px 0;font-size:1.1rem;border-bottom:1px solid #eef1f5}
+ .hdr-call{padding:11px 16px}
+ .two,.contact .two{grid-template-columns:1fr}
+ .fab{display:flex}
+ .sec{padding:56px 0}
+ .hg{grid-template-columns:1fr;gap:32px}
+ .gauge{max-width:300px}
+ .hero{min-height:0;padding:36px 0 48px}
+}
+@media(max-width:420px){.logo{font-size:.95rem}.cta .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.in,.js .on,.js h2,.js .svc,.js .about p,.js .facts li,.js .rev,.js .more,.js .info p,.js .map{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="phone" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></symbol>
+</svg>
+
+<header>
+ <div class="wrap bar">
+  <a class="logo" href="#top">Blacktown Automotive Services</a>
+  <nav id="nav" aria-label="Main">
+   <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+   </ul>
+  </nav>
+  <a class="pin" href="#contact" aria-label="Our location"><svg class="ic" width="24" height="24"><use href="#pin"/></svg></a>
+  <a class="btn hdr-call" href="tel:+61296225598"><svg class="ic" width="20" height="20"><use href="#phone"/></svg>Call Now<span class="num">&nbsp;&middot; +61 2 9622 5598</span></a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg class="ic s" viewBox="0 0 24 24" width="28" height="28"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+ </div>
+</header>
+
+<main id="top">
+<section class="hero">
+ <div class="wrap hg">
+  <div>
+   <p class="status in" id="status"><i></i><span>Open Mon&ndash;Fri 8:00 am &ndash; 4:30 pm</span></p>
+   <h1 class="in">Reliable Auto Repair in Kings Park.</h1>
+   <p class="sub in">Family Owned Since 1999.</p>
+   <div class="cta in">
+    <a class="btn" href="tel:+61296225598"><svg class="ic" width="20" height="20"><use href="#phone"/></svg>Call to Book</a>
+    <a class="btn alt" href="#services">Our Services</a>
+   </div>
+  </div>
+  <div class="gauge in">
+   <svg viewBox="0 0 300 300" role="img" aria-label="Rated 4.8 out of 5 on Google">
+    <circle cx="150" cy="150" r="146" fill="#0f2747"/>
+    <circle cx="150" cy="150" r="136" fill="none" stroke="#24457a" stroke-width="2"/>
+    <path d="M63.7 236.3A122 122 0 1 1 236.3 236.3" fill="none" stroke="#3a5d93" stroke-width="6" stroke-dasharray="2 8"/>
+    <path d="M73.6 226.4A108 108 0 1 1 226.4 226.4" fill="none" stroke="#1b3a68" stroke-width="12" stroke-linecap="round"/>
+    <path class="val" pathLength="100" d="M73.6 226.4A108 108 0 1 1 226.4 226.4" fill="none" stroke="#ff6a13" stroke-width="12" stroke-linecap="round"/>
+    <g class="needle"><path d="M150 164V68" stroke="#fff" stroke-width="5" stroke-linecap="round"/></g>
+    <circle cx="150" cy="150" r="11" fill="#ff6a13" stroke="#fff" stroke-width="3"/>
+    <text x="150" y="226" text-anchor="middle" fill="#fff" font-size="46" font-weight="900" font-family="Inter,system-ui,Arial,sans-serif">4.8</text>
+    <text x="150" y="248" text-anchor="middle" fill="#9fb2cf" font-size="13" font-weight="600" font-family="Inter,system-ui,Arial,sans-serif">out of 5</text>
+   </svg>
+   <div class="badge"><b>&#9733;</b> 4.8/5 Stars on Google</div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="services">
+ <div class="wrap">
+  <h2>Our Core Services</h2>
+  <div class="grid">
+   <article class="svc"><svg class="ic s" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.500 12.500l3 3 6-6.500"/></svg><h3>Rego Check</h3><p>While you wait.</p></article>
+   <article class="svc"><svg class="ic s" viewBox="0 0 24 24"><path d="M12 2v20M3.300 7l17.400 10M3.300 17L20.700 7"/></svg><h3>Air Conditioning</h3><p>Repairs and services.</p></article>
+   <article class="svc"><svg class="ic s" viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 0 1 3 3v15H8a3 3 0 0 1-3-3V3z"/><path d="M9 8h6M9 12h6"/></svg><h3>Log Book Servicing</h3><p>Manufacturer approved.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="sec about" id="about">
+ <div class="wrap two">
+  <div>
+   <h2>Your Local Mechanics For Over 25 Years</h2>
+   <p>Blacktown Automotive Services is a family owned business that has looked after local drivers since 1999.</p>
+   <p>We keep it simple: honest advice, clear pricing with no hidden costs, and work done properly the first time. Most of our customers keep coming back, and that is how we like it.</p>
+  </div>
+  <ul class="facts">
+   <li>Honest advice<span>We explain the work before we do it.</span></li>
+   <li>No hidden costs<span>The price we quote is the price you pay.</span></li>
+   <li>Long-term relationships<span>Local families and drivers who return year after year.</span></li>
+  </ul>
+ </div>
+</section>
+
+<section class="sec" id="reviews">
+ <div class="wrap">
+  <h2>What Our Customers Say</h2>
+  <div class="grid">
+   <blockquote class="rev">&ldquo;Always the right advice at the right price.&rdquo;<cite>Google review</cite></blockquote>
+   <blockquote class="rev">&ldquo;Nothing is ever a problem.&rdquo;<cite>Google review</cite></blockquote>
+   <blockquote class="rev">&ldquo;Happy to explain everything to you.&rdquo;<cite>Google review</cite></blockquote>
+   <blockquote class="rev">&ldquo;Great and honest mechanical workshop.&rdquo;<cite>Google review</cite></blockquote>
+  </div>
+  <p class="more"><a href="https://maps.app.goo.gl/pNjxT1FjWRPNHGTf9" target="_blank" rel="noopener">Read all reviews on Google</a></p>
+ </div>
+</section>
+
+<section class="sec contact" id="contact">
+ <div class="wrap">
+  <h2>Find Us in Kings Park</h2>
+  <div class="two">
+   <div class="info">
+    <p><b>Address</b>Unit 3, 4 Romford Rd, Kings Park NSW 2148</p>
+    <p><b>Opening hours</b>Monday to Friday: 8:00 am &ndash; 4:30 pm<br>Saturday and Sunday: Closed</p>
+    <p><b>Phone</b><a href="tel:+61296225598">+61 2 9622 5598</a></p>
+    <p><b>Email</b><a href="mailto:blacktownautomotive@hotmail.com">blacktownautomotive@hotmail.com</a></p>
+    <p><a class="btn dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=Unit%203%2C%204%20Romford%20Rd%2C%20Kings%20Park%20NSW%202148" target="_blank" rel="noopener">Get Directions</a></p>
+   </div>
+   <iframe class="map" title="Map of Blacktown Automotive Services" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=150.909%2C-33.7529%2C150.9213%2C-33.7449&amp;layer=mapnik&amp;marker=-33.7488672%2C150.915338"></iframe>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap">&copy; 2026 Blacktown Automotive Services. Unit 3, 4 Romford Rd, Kings Park NSW 2148.</div></footer>
+
+<a class="fab" href="tel:+61296225598" aria-label="Call Blacktown Automotive Services"><svg class="ic" width="28" height="28"><use href="#phone"/></svg></a>
+
+<script>
+(function(){
+ var b=document.getElementById('burger'),n=document.getElementById('nav');
+ function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu')}
+ b.addEventListener('click',function(){set(!n.classList.contains('open'))});
+ n.addEventListener('click',function(e){if(e.target.tagName==='A')set(false)});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+})();
+</script>
+<script>
+(function(){
+ var el=document.getElementById('status');
+ function upd(){
+  try{
+   var o={};new Intl.DateTimeFormat('en-US',{timeZone:'Australia/Sydney',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){o[x.type]=x.value});
+   var t=+o.hour*60+ +o.minute,d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(o.weekday),wk=d>0&&d<6,open=wk&&t>=480&&t<990,m;
+   if(open)m='Open now \u00b7 closes 4:30 pm';
+   else if(wk&&t<480)m='Closed now \u00b7 opens today at 8:00 am';
+   else if(d>=1&&d<=4)m='Closed now \u00b7 opens tomorrow at 8:00 am';
+   else m='Closed now \u00b7 opens Monday at 8:00 am';
+   el.classList.toggle('open',open);el.lastChild.textContent=m;
+  }catch(e){}
+ }
+ upd();setInterval(upd,30000);
+})();
+(function(){
+ try{
+  var els=document.querySelectorAll('h2,.svc,.about p,.facts li,.rev,.more,.info p,.map');
+  var fired=false;setTimeout(function(){if(!fired)document.documentElement.classList.remove('js')},2500);
+  var io=new IntersectionObserver(function(es){fired=true;es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(el){var i=[].indexOf.call(el.parentNode.children,el);el.style.transitionDelay=Math.min(i,4)*90+'ms';io.observe(el)});
+ }catch(e){document.documentElement.classList.remove('js')}
+})();
+</script>
+</body>
+</html>
