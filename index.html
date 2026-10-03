@@ -25,6 +25,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);-webkit
 nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
 nav a{text-decoration:none;font-weight:600;color:#33445c}
 nav a:hover{color:var(--orange)}
+.hdr-call{overflow:hidden;max-width:360px;box-shadow:none;transition:opacity .3s,visibility .3s,max-width .35s,padding .35s,margin .35s}
+.js body:not(.past) .hdr-call{opacity:0;visibility:hidden;max-width:0;padding-left:0;padding-right:0;margin-left:-12px}
 .pin{display:flex;color:var(--navy);padding:8px}
 .btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--orange);color:#fff;font-weight:800;text-decoration:none;padding:13px 22px;border-radius:10px;box-shadow:0 6px 16px rgba(255,106,19,.3);transition:transform .2s,box-shadow .2s,background .2s}
 .btn:hover{background:#e85a05;transform:translateY(-2px);box-shadow:0 10px 22px rgba(255,106,19,.4)}
@@ -94,8 +96,11 @@ h2{font-size:clamp(1.8rem,5vw,2.7rem);line-height:1.1;font-weight:900;color:var(
 .av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;flex:none;color:#fff;font-style:normal;font-weight:800;font-size:1.05rem}.who b{display:block;font-size:1rem;color:var(--ink)}
 @media(max-width:860px){.rc{flex-basis:calc((100% - 18px)/2)}}
 @media(max-width:560px){.rc{flex-basis:86%}.ar{width:44px;height:44px}}
+footer .fw{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px}
+footer a{color:#fff;font-weight:700;text-underline-offset:3px}
 footer{background:#0a1a33;color:#9fb2cf;padding:26px 0;padding-bottom:calc(26px + env(safe-area-inset-bottom));font-size:.95rem}
-.fab{display:none;position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;width:62px;height:62px;border-radius:50%;background:var(--orange);color:#fff;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,.3);animation:pulse 2.4s ease-out 2s 3}
+.fab{display:none;position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;width:62px;height:62px;border-radius:50%;background:var(--orange);color:#fff;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,.3);opacity:0;visibility:hidden;transform:scale(.7);transition:opacity .35s,transform .35s,visibility .35s}
+.past .fab{opacity:1;visibility:visible;transform:none;animation:pulse 2.4s ease-out .6s 3}
 .fab .ic{width:28px;height:28px}
 @keyframes pulse{0%{box-shadow:0 8px 22px rgba(0,0,0,.3),0 0 0 0 rgba(255,106,19,.6)}100%{box-shadow:0 8px 22px rgba(0,0,0,.3),0 0 0 22px rgba(255,106,19,0)}}
 @media(max-width:860px){
@@ -104,14 +109,16 @@ footer{background:#0a1a33;color:#9fb2cf;padding:26px 0;padding-bottom:calc(26px 
  nav.open{display:block}
  nav ul{flex-direction:column;gap:0;padding:6px 20px 14px}
  nav a{display:block;padding:14px 0;font-size:1.1rem;border-bottom:1px solid #eef1f5}
- .hdr-call{padding:11px 16px}
+ 
  .two,.contact .two{grid-template-columns:1fr}
  .fab{display:flex}
+ .hdr-call{display:none}
+ footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
  .sec{padding:56px 0}
- .hero{display:block;min-height:0;padding:0}
+ .hero{display:block;min-height:0;padding:0 0 48px}
  .himg{position:relative;width:100%;aspect-ratio:3/2}
  .himg::after{background:linear-gradient(0deg,#0a1a33 0,rgba(10,26,51,.55) 28%,rgba(10,26,51,0) 62%)}
- .hg{margin-top:-30px;padding-bottom:44px}
+ .hg{margin-top:-30px;padding-bottom:92px}
  .status{font-size:.82rem;padding:6px 12px}
  .badge{right:12px;top:12px;bottom:auto;font-size:.85rem;padding:6px 12px}
 }
@@ -152,7 +159,7 @@ footer{background:#0a1a33;color:#9fb2cf;padding:26px 0;padding-bottom:calc(26px 
    <h1 class="in">Reliable Auto Repair in Kings Park.</h1>
    <p class="sub in">Family Owned Since 1999.</p>
    <div class="cta in">
-    <a class="btn" href="tel:+61296225598"><svg class="ic" width="20" height="20"><use href="#phone"/></svg>Call to Book</a>
+    <a class="btn" href="tel:+61296225598"><svg class="ic" width="20" height="20"><use href="#phone"/></svg>Call to Book<span class="num">&nbsp;&middot; +61 2 9622 5598</span></a>
     <a class="btn alt" href="#services">Our Services</a>
    </div>
   </div>
@@ -214,6 +221,7 @@ footer{background:#0a1a33;color:#9fb2cf;padding:26px 0;padding-bottom:calc(26px 
     <p><b>Opening hours</b>Monday to Friday: 8:00 am &ndash; 4:30 pm<br>Saturday and Sunday: Closed</p>
     <p><b>Phone</b><a href="tel:+61296225598">+61 2 9622 5598</a></p>
     <p><b>Email</b><a href="mailto:blacktownautomotive@hotmail.com">blacktownautomotive@hotmail.com</a></p>
+    <p><b>Facebook</b><a href="https://www.facebook.com/blacktownautomotive/" target="_blank" rel="noopener">facebook.com/blacktownautomotive</a></p>
     <p><a class="btn dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=Unit%203%2C%204%20Romford%20Rd%2C%20Kings%20Park%20NSW%202148" target="_blank" rel="noopener">Get Directions</a></p>
    </div>
    <iframe class="map" title="Map of Blacktown Automotive Services" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.5!2d150.915338!3d-33.7488672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b1298dc420e4d1b%3A0x9cb4f66d7989b017!2sBlacktown%20Automotive%20Services!5e0!3m2!1sen!2sau!4v1759500000000!5m2!1sen!2sau"></iframe>
@@ -222,7 +230,7 @@ footer{background:#0a1a33;color:#9fb2cf;padding:26px 0;padding-bottom:calc(26px 
 </section>
 </main>
 
-<footer><div class="wrap">&copy; 2026 Blacktown Automotive Services. Unit 3, 4 Romford Rd, Kings Park NSW 2148.</div></footer>
+<footer><div class="wrap fw"><span>&copy; 2026 Blacktown Automotive Services. Unit 3, 4 Romford Rd, Kings Park NSW 2148.</span><a href="https://www.facebook.com/blacktownautomotive/" target="_blank" rel="noopener">Follow us on Facebook</a></div></footer>
 
 <a class="fab" href="tel:+61296225598" aria-label="Call Blacktown Automotive Services"><svg class="ic" width="28" height="28"><use href="#phone"/></svg></a>
 
@@ -269,6 +277,12 @@ footer{background:#0a1a33;color:#9fb2cf;padding:26px 0;padding-bottom:calc(26px 
  ['mouseenter','focusin','touchstart'].forEach(function(e){t.addEventListener(e,function(){hold=true},{passive:true})});
  ['mouseleave','focusout','touchend'].forEach(function(e){t.addEventListener(e,function(){hold=false},{passive:true})});
  if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(function(){if(!hold&&!document.hidden)go(1)},4500);
+})();
+</script>
+<script>
+(function(){
+ var b=document.body,h=document.querySelector('.hero .cta .btn');
+ try{new IntersectionObserver(function(e){b.classList.toggle('past',!e[0].isIntersecting&&e[0].boundingClientRect.top<0)}).observe(h)}catch(x){b.classList.add('past')}
 })();
 </script>
 </body>
