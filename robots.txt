@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://konkos-design.github.io/Reliable-Auto-Repair-in-Kings-Park/sitemap.xml
